@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
   <body >
-<nav class="navbar navbar-fixed" style="background-color:#b3cccc">
+<nav class="navbar navbar-inverse" style="background-color:#b3cccc">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -123,10 +123,15 @@ window.onload = function () {
 };
 
 </script>
-<div><pre><h3><span class="glyphicon glyphicon-bullhorn" style="color:red"></span>&nbsp;buy link disabled in <span id="time" value="10"></span> minutes!</h3></pre></div>
-
+<div class="panel panel-default">
+  <div class="panel-body"  style="background-color: #f0f5f5;">
+<div><h3><span class="glyphicon glyphicon-bullhorn" style="color:red"></span>&nbsp;buy link disabled in <span id="time" value="10"></span> minutes!</h3></div>
+</div></div>
 <br><br><br>
-<div><pre><h4>product quanytity:  <span id="qt" type="number" value="10" style="color:red">10</span> number of pieces in stock!</h4></pre></div><br>
+
+<div class="panel panel-default">
+  <div class="panel-body"  style="background-color: #f0f5f5;">
+<div><h4>product quanytity:  <span id="qt" type="number" value="10" style="color:red">10</span> number of pieces in stock!</h4></div></div></div><br>
 <br><br>
 
 <button type="button" id="butt" class="btn btn-info btn-block active" onclick="quantity()"><h4><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;BUY</h4></button><br><br>
