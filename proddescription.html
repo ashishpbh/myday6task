@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+  <body >
+<nav class="navbar navbar-fixed" style="background-color:#b3cccc">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">NAVBAR</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid" >
+<div class="row" >
+<div class="panel panel-default">
+  <div class="panel-body"  style="background-color: #f0f5f5;">
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-body"><h3 style="text-align:center;font-family:Times New Roman"><span>PRODUCT IMAGE</span></h3>
+  
+  
+  
+  <div class="container-fluid" style="background-color: #6699cc;">
+  <div class="thumbnail">
+      
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81gTNPGS7GL.jpg" alt="Nature" width="200" height="200">
+        <div class="caption">
+          <p>Book related to security of...</p>
+		    </div>
+     
+    </div>
+</div><!--basic list container end-->
+  
+  </div><!--panel body end-->
+</div><!--panel end-->
+
+</div><!--div end-->
+
+<div class="col-md-6" >
+<div class="panel panel-default">
+  <div class="panel-body">
+  
+<p id="demo"></p>
+<div id="txt"></div>
+
+
+<script>
+function startTimer(duration, display) {
+    var start = Date.now(),
+        diff,
+        minutes,
+        seconds;
+    function timer() {
+        // get the number of seconds that have elapsed since 
+        // startTimer() was called
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+
+        // does the same job as parseInt truncates the float
+        minutes = (diff / 60) | 0;
+        seconds = (diff % 60) | 0;
+		if( minutes == 0 && seconds == 0)
+		{
+		document.getElementById("butt").disabled = true;
+		
+	 
+		}
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+		
+		
+        display.textContent = minutes + ":" + seconds; 
+
+        if (diff <= 0) {
+            // add one second so that the count down starts at the full duration
+            // example 05:00 not 04:59
+            start = Date.now() + 1000;
+        }
+    };
+    // we don't want to wait a full second before the timer starts
+    timer();
+    setInterval(timer, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 2,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+	
+	
+ 
+};
+
+</script>
+<div><pre><h3><span class="glyphicon glyphicon-bullhorn" style="color:red"></span>&nbsp;buy link disabled in <span id="time" value="10"></span> minutes!</h3></pre></div>
+
+<br><br><br>
+<div><pre><h4>product quanytity:  <span id="qt" type="number" value="10" style="color:red">10</span> number of pieces in stock!</h4></pre></div><br>
+<br><br>
+
+<button type="button" id="butt" class="btn btn-info btn-block active" onclick="quantity()"><h4><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;BUY</h4></button><br><br>
+ <script> 
+   function quantity() {
+  
+   var x = document.getElementById("qt").innerText;
+   var y = parseInt(x);
+   y=y-1;
+  
+   document.getElementById("qt").innerHTML =y;
+     
+	 if(y==0)
+	 {
+	 document.getElementById("butt").disabled = true;
+	 
+	 }
+   
+}
+
+  </script>
+  
+  </div><!--pannel body end here-->
+</div><!--pannelend here-->
+
+</div><!--sec 9 end here-->
+
+</div><!--row end here-->
+
+  </div></div><!--row end here-->
+
+  </div>
+
+</body>
+</html>
