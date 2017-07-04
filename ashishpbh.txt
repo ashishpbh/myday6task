@@ -1,0 +1,1 @@
+Same problem of timer being started again with 2 minutes, yes the button gets disabled but the timer should be either stopped.
